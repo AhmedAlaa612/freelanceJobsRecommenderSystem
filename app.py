@@ -34,14 +34,14 @@ def fetch_data(curr=0):
                         with st.popover("Read more"):
                             st.write(description)
                     # visit the job link button
-                    st.page_link(similar['link'][i], label="job link", icon="🌎")
-                    st.write("experience level:", similar['experience_level'][i])
-                    st.write("job type:", similar['job_type'][i])
-                    if similar['job_type'][i] == 'Hourly':
-                        st.write("hourly rate:", similar['lower_range'][i], "-", similar['higher_range'][i])
-                        st.write("Duration:", similar['duration'][i])
+                    st.page_link(similar['link'][idx], label="job link", icon="🌎")
+                    st.write("experience level:", similar['experience_level'][idx])
+                    st.write("job type:", similar['job_type'][idx])
+                    if similar['job_type'][idx] == 'Hourly':
+                        st.write("hourly rate:", similar['lower_range'][idx], "-", similar['higher_range'][idx])
+                        st.write("Duration:", similar['duration'][idx])
                     else:
-                        st.write("budget:", similar['budget'][i])
+                        st.write("budget:", similar['budget'][idx])
         st.divider()
     
     if st.button("Load more", key=f"load_more_{curr}"):
